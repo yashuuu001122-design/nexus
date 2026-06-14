@@ -149,7 +149,7 @@ export default function NexusWebsite() {
       <header className="sticky top-0 z-30 backdrop-blur-2xl bg-black/20 border-b border-white/10 shadow-lg shadow-black/10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="h-11 w-11 rounded-2xl bg-gradient-to-br from-fuchsia-500 via-red-500 to-rose-700 shadow-2xl shadow-red-900/40 flex items-center justify-center text-xl font-black ring-1 ring-white/20">
+            <div className="h-11 w-11 rounded-2xl bg-gradient-to-br from-red-500 via-red-500 to-rose-700 shadow-2xl shadow-red-900/40 flex items-center justify-center text-xl font-black ring-1 ring-white/20">
               N
             </div>
             <div>
@@ -177,14 +177,14 @@ export default function NexusWebsite() {
         <motion.section className="max-w-7xl mx-auto px-6 pt-16 md:pt-24 pb-20" {...sectionAnimation}>
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-fuchsia-500/10 to-rose-500/10 border border-white/10 text-sm text-red-200 mb-6 backdrop-blur-xl shadow-lg shadow-red-900/20">
-                <span className="h-2 w-2 rounded-full bg-fuchsia-400 animate-pulse" />
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-red-500/10 to-rose-500/10 border border-white/10 text-sm text-red-200 mb-6 backdrop-blur-xl shadow-lg shadow-red-900/20">
+                <span className="h-2 w-2 rounded-full bg-red-400 animate-pulse" />
                 Beautiful website for your Discord bot
               </div>
 
               <h1 className="text-4xl md:text-6xl font-black leading-tight tracking-tight">
                 <motion.span
-                  className="inline-block text-transparent bg-clip-text bg-[length:200%_200%] bg-gradient-to-r from-fuchsia-400 via-red-200 to-rose-500"
+                  className="inline-block text-transparent bg-clip-text bg-[length:200%_200%] bg-gradient-to-r from-red-400 via-red-200 to-rose-500"
                   animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
                   transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
                 >
@@ -231,7 +231,7 @@ export default function NexusWebsite() {
               transition={{ duration: 0.9 }}
               className="relative"
             >
-              <div className="absolute -inset-6 bg-gradient-to-r from-fuchsia-500/20 via-rose-500/20 to-red-800/10 blur-3xl rounded-full" />
+              <div className="absolute -inset-6 bg-gradient-to-r from-red-500/20 via-rose-500/20 to-red-800/10 blur-3xl rounded-full" />
               <div className="relative rounded-[2rem] border border-white/10 bg-white/10 backdrop-blur-3xl shadow-2xl shadow-red-950/40 overflow-hidden ring-1 ring-white/10">
                 <div className="p-4 border-b border-white/10 flex items-center justify-between bg-black/20">
                   <div className="flex items-center gap-2">
@@ -245,7 +245,7 @@ export default function NexusWebsite() {
                 <div className="p-6 md:p-8 space-y-5">
                   <motion.div
                     whileHover={{ scale: 1.01, y: -2 }}
-                    className="rounded-3xl bg-gradient-to-br from-fuchsia-500/20 to-rose-700/20 border border-white/10 p-6 backdrop-blur-2xl shadow-lg shadow-red-900/20"
+                    className="rounded-3xl bg-gradient-to-br from-red-500/20 to-rose-700/20 border border-white/10 p-6 backdrop-blur-2xl shadow-lg shadow-red-900/20"
                   >
                     <div className="text-sm text-red-200 mb-2">Featured Bot Panel</div>
                     <div className="text-3xl font-black">Nexus.</div>
@@ -296,7 +296,7 @@ export default function NexusWebsite() {
                     type="button"
                     onClick={isInviteCard ? openInvite : undefined}
                     className={`rounded-[2rem] border border-white/10 bg-white/10 p-6 backdrop-blur-3xl transition duration-300 shadow-xl shadow-red-900/20 hover:shadow-red-700/30 block text-left w-full h-full ${
-                      isInviteCard ? "cursor-pointer hover:border-fuchsia-400/40" : ""
+                      isInviteCard ? "cursor-pointer hover:border-red-400/40" : ""
                     }`}
                   >
                     <div className="text-4xl mb-4">{feature.icon}</div>
@@ -327,7 +327,7 @@ export default function NexusWebsite() {
                       onClick={() => setActiveCommandTab(tab)}
                       className={`px-4 py-2.5 rounded-2xl border transition duration-300 ${
                         active
-                          ? "bg-gradient-to-r from-fuchsia-500/30 to-rose-500/30 border-fuchsia-400/40 shadow-lg shadow-red-900/20"
+                          ? "bg-gradient-to-r from-red-500/30 to-rose-500/30 border-red-400/40 shadow-lg shadow-red-900/20"
                           : "bg-white/6 border-white/10 hover:bg-white/10"
                       }`}
                     >
@@ -356,7 +356,7 @@ export default function NexusWebsite() {
             </div>
 
             <div id="stats" className="space-y-6">
-              <motion.div whileHover={{ y: -4 }} className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-fuchsia-600/15 to-rose-800/15 p-8 backdrop-blur-3xl shadow-xl shadow-red-900/20">
+              <motion.div whileHover={{ y: -4 }} className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-red-600/15 to-rose-800/15 p-8 backdrop-blur-3xl shadow-xl shadow-red-900/20">
                 <div className="text-red-300 font-semibold tracking-[0.25em] uppercase text-xs mb-3">Highlights</div>
                 <h3 className="text-2xl md:text-3xl font-black">Why people will like this site</h3>
                 <ul className="mt-6 space-y-4 text-white/75 leading-7">
@@ -418,7 +418,7 @@ export default function NexusWebsite() {
         </motion.section>
 
         <motion.section id="support" className="max-w-7xl mx-auto px-6 py-20" {...sectionAnimation}>
-          <div className="rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-fuchsia-500/20 via-rose-700/15 to-black/40 p-8 md:p-12 text-center backdrop-blur-3xl shadow-2xl shadow-red-900/40 ring-1 ring-white/10 hover:shadow-red-600/40 transition duration-300">
+          <div className="rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-red-500/20 via-rose-700/15 to-black/40 p-8 md:p-12 text-center backdrop-blur-3xl shadow-2xl shadow-red-900/40 ring-1 ring-white/10 hover:shadow-red-600/40 transition duration-300">
             <div className="text-red-300 font-semibold tracking-[0.3em] uppercase text-xs mb-3">Nexus</div>
             <h2 className="text-3xl md:text-5xl font-black leading-tight">Invite your bot in one click</h2>
             <p className="mt-5 text-white/70 text-lg max-w-2xl mx-auto leading-8">
