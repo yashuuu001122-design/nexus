@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useMemo, useState } from "react";
 
-export default function KyraaWebsite() {
+export default function NexusWebsite() {
   const [activeCommandTab, setActiveCommandTab] = useState("Music");
   const [showInvitePopup, setShowInvitePopup] = useState(false);
 
@@ -13,7 +13,7 @@ export default function KyraaWebsite() {
     },
     {
       title: "Invite in One Click",
-      desc: "Users can invite Kyraa. straight from the website using the Discord bot invite flow.",
+      desc: "Users can invite the bot straight from the website using the Discord bot invite flow.",
       icon: "🔗",
     },
     {
@@ -35,7 +35,6 @@ export default function KyraaWebsite() {
     { label: "Theme", value: "Purple Premium" },
   ];
 
-  // FIXED: Removed the malformed object declaration inside the array
   const commandTabs = useMemo(
     () => ({
       Music: [
@@ -66,7 +65,8 @@ export default function KyraaWebsite() {
     []
   );
 
-  const activeCommands = commandTabs[activeCommandTab as keyof typeof commandTabs] || [];
+  // FIXED: Standard JavaScript bracket notation without TypeScript types
+  const activeCommands = commandTabs[activeCommandTab] || [];
 
   const inviteLink =
     "https://discord.com/oauth2/authorize?client_id=1410402936487411774&permissions=8&scope=bot%20applications.commands";
@@ -100,9 +100,10 @@ export default function KyraaWebsite() {
         )}
       </AnimatePresence>
 
-      {/* Decorative Background Elements */}
+      {/* Background Gradients */}
       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top,rgba(139,92,246,0.25),transparent_35%),radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.18),transparent_25%),radial-gradient(circle_at_20%_80%,rgba(76,29,149,0.22),transparent_30%)]" />
 
+      {/* Floating Particles */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {Array.from({ length: 18 }).map((_, i) => (
           <motion.span
@@ -145,15 +146,14 @@ export default function KyraaWebsite() {
         className="absolute bottom-20 left-1/3 h-56 w-56 rounded-full bg-purple-800/20 blur-3xl pointer-events-none"
       />
 
-      {/* Header */}
       <header className="sticky top-0 z-30 backdrop-blur-2xl bg-black/20 border-b border-white/10 shadow-lg shadow-black/10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="h-11 w-11 rounded-2xl bg-gradient-to-br from-fuchsia-500 via-purple-500 to-violet-700 shadow-2xl shadow-purple-900/40 flex items-center justify-center text-xl font-black ring-1 ring-white/20">
-              K
+              N
             </div>
             <div>
-              <div className="text-lg font-bold tracking-wide">Kyraa.</div>
+              <div className="text-lg font-bold tracking-wide">Nexus</div>
               <div className="text-xs text-white/60">Premium Discord Bot Website</div>
             </div>
           </div>
@@ -173,9 +173,7 @@ export default function KyraaWebsite() {
         </div>
       </header>
 
-      {/* Main Content */}
       <main className="relative z-10">
-        {/* Hero Section */}
         <motion.section className="max-w-7xl mx-auto px-6 pt-16 md:pt-24 pb-20" {...sectionAnimation}>
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
@@ -190,12 +188,12 @@ export default function KyraaWebsite() {
                   animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
                   transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
                 >
-                  Kyraa.
+                  Nexus.
                 </motion.span>
               </h1>
 
               <p className="mt-6 text-white/70 text-lg leading-8 max-w-2xl">
-                Welcome to Kyraa. — your ultimate Discord music bot. Enjoy smooth playback, powerful controls, and a premium experience designed to elevate your server's vibe.
+                Welcome to Nexus — your ultimate Discord partner. Enjoy smooth playback, powerful controls, and a premium experience designed to elevate your server's vibe.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
@@ -203,7 +201,7 @@ export default function KyraaWebsite() {
                   onClick={openInvite}
                   className="px-6 py-3 rounded-2xl bg-gradient-to-r from-fuchsia-500 via-purple-500 to-violet-600 font-semibold hover:scale-[1.05] hover:shadow-2xl hover:shadow-purple-600/40 transition duration-300 inline-block"
                 >
-                  Invite Kyraa.
+                  Invite Bot
                 </button>
                 <a
                   href="#features"
@@ -227,7 +225,6 @@ export default function KyraaWebsite() {
               </div>
             </motion.div>
 
-            {/* Panel Graphic */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -242,7 +239,7 @@ export default function KyraaWebsite() {
                     <span className="h-3 w-3 rounded-full bg-yellow-400" />
                     <span className="h-3 w-3 rounded-full bg-green-400" />
                   </div>
-                  <div className="text-sm text-white/60">kyraa-.vercel.app</div>
+                  <div className="text-sm text-white/60">nexus-prime.vercel.app</div>
                 </div>
 
                 <div className="p-6 md:p-8 space-y-5">
@@ -251,7 +248,7 @@ export default function KyraaWebsite() {
                     className="rounded-3xl bg-gradient-to-br from-fuchsia-500/20 to-violet-700/20 border border-white/10 p-6 backdrop-blur-2xl shadow-lg shadow-purple-900/20"
                   >
                     <div className="text-sm text-purple-200 mb-2">Featured Bot Panel</div>
-                    <div className="text-3xl font-black">Kyraa.</div>
+                    <div className="text-3xl font-black">Nexus.</div>
                     <div className="mt-5 flex gap-3 flex-wrap">
                       {["Music", "24/7", "Invite"].map((tag) => (
                         <div key={tag} className="px-3 py-2 rounded-xl bg-white/10 text-sm border border-white/10">
@@ -277,7 +274,6 @@ export default function KyraaWebsite() {
           </div>
         </motion.section>
 
-        {/* Features Section */}
         <motion.section id="features" className="max-w-7xl mx-auto px-6 py-16" {...sectionAnimation}>
           <div className="text-center max-w-3xl mx-auto mb-12">
             <div className="text-purple-300 font-semibold tracking-[0.25em] uppercase text-xs mb-3">Features</div>
@@ -313,14 +309,13 @@ export default function KyraaWebsite() {
           </div>
         </motion.section>
 
-        {/* Commands Section */}
         <motion.section id="commands" className="max-w-7xl mx-auto px-6 py-16" {...sectionAnimation}>
           <div className="grid lg:grid-cols-2 gap-8 items-start">
             <div className="rounded-[2rem] border border-white/10 bg-white/10 p-8 backdrop-blur-3xl shadow-xl shadow-purple-900/20 hover:shadow-purple-700/30 transition duration-300">
               <div className="text-purple-300 font-semibold tracking-[0.25em] uppercase text-xs mb-3">Commands</div>
               <h2 className="text-3xl md:text-4xl font-black">Command categories</h2>
               <p className="mt-4 text-white/65 leading-8 text-lg">
-                Switch between categories to preview what Kyraa. can do.
+                Switch between categories to preview what Nexus can do.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
@@ -360,13 +355,13 @@ export default function KyraaWebsite() {
               </motion.div>
             </div>
 
-            <div id="stats-highlights" className="space-y-6">
+            <div id="stats" className="space-y-6">
               <motion.div whileHover={{ y: -4 }} className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-fuchsia-600/15 to-violet-800/15 p-8 backdrop-blur-3xl shadow-xl shadow-purple-900/20">
                 <div className="text-purple-300 font-semibold tracking-[0.25em] uppercase text-xs mb-3">Highlights</div>
                 <h3 className="text-2xl md:text-3xl font-black">Why people will like this site</h3>
                 <ul className="mt-6 space-y-4 text-white/75 leading-7">
                   <li>• Invite button is placed clearly for fast bot adding.</li>
-                  <li>• Premium purple theme fits music bot branding.</li>
+                  <li>• Premium purple theme fits server dashboard branding.</li>
                   <li>• Strong hover effects make the UI feel alive.</li>
                   <li>• Smooth animated transitions improve the overall feel.</li>
                 </ul>
@@ -382,13 +377,12 @@ export default function KyraaWebsite() {
           </div>
         </motion.section>
 
-        {/* FAQ Section */}
         <motion.section id="faq" className="max-w-7xl mx-auto px-6 py-16" {...sectionAnimation}>
           <div className="text-center max-w-3xl mx-auto mb-12">
             <div className="text-purple-300 font-semibold tracking-[0.25em] uppercase text-xs mb-3">FAQ</div>
             <h2 className="text-3xl md:text-5xl font-black">Frequently asked questions</h2>
             <p className="mt-4 text-white/65 text-lg">
-              Common questions for users who visit the Kyraa. website.
+              Common questions for users who visit the Nexus website.
             </p>
           </div>
 
@@ -396,7 +390,7 @@ export default function KyraaWebsite() {
             {[
               {
                 q: "How does the invite button work?",
-                a: "Users can invite Kyraa. directly from this website using the Discord invite flow.",
+                a: "Users can invite the bot directly from this website using the Discord invite flow.",
               },
               {
                 q: "Can I add more sections later?",
@@ -423,10 +417,9 @@ export default function KyraaWebsite() {
           </div>
         </motion.section>
 
-        {/* Footer Support Invite Banner Section */}
         <motion.section id="support" className="max-w-7xl mx-auto px-6 py-20" {...sectionAnimation}>
           <div className="rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-fuchsia-500/20 via-violet-700/15 to-black/40 p-8 md:p-12 text-center backdrop-blur-3xl shadow-2xl shadow-purple-900/40 ring-1 ring-white/10 hover:shadow-purple-600/40 transition duration-300">
-            <div className="text-purple-300 font-semibold tracking-[0.3em] uppercase text-xs mb-3">Kyraa.</div>
+            <div className="text-purple-300 font-semibold tracking-[0.3em] uppercase text-xs mb-3">Nexus</div>
             <h2 className="text-3xl md:text-5xl font-black leading-tight">Invite your bot in one click</h2>
             <p className="mt-5 text-white/70 text-lg max-w-2xl mx-auto leading-8">
               Smooth gradients, stronger glass cards, animated transitions, category tabs, and invite popup are now all part of the experience.
@@ -436,7 +429,7 @@ export default function KyraaWebsite() {
                 onClick={openInvite}
                 className="px-6 py-3 rounded-2xl bg-gradient-to-r from-fuchsia-500 via-purple-500 to-violet-600 font-semibold hover:scale-[1.05] hover:shadow-2xl hover:shadow-purple-600/40 transition duration-300 inline-block"
               >
-                Invite Kyraa.
+                Invite Nexus
               </button>
               <a
                 href="https://discord.gg/zErS7FTxhX"
@@ -453,7 +446,7 @@ export default function KyraaWebsite() {
 
       <footer className="relative z-10 border-t border-white/10 bg-black/20 backdrop-blur-2xl">
         <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/55">
-          <div>© 2026 Kyraa. — Designed for a premium Discord bot feel.</div>
+          <div>© 2026 Nexus — Designed for a premium Discord bot feel.</div>
           <div className="flex items-center gap-5">
             <a href="#features" className="hover:text-white transition">Features</a>
             <a href="#commands" className="hover:text-white transition">Commands</a>
