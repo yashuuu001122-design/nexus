@@ -47,17 +47,22 @@ export default function KyraaWebsite() {
       ],
       Utility: [
         "$help",
-        "$invite",
-        "$support",
-        "$ping",
-        "$stats",
-        "$about",
-      ]
-      Admin: [
-        "$setup",
-        "$prefix",
-        "$dj",
-        "$autoplay",
+        const commands = {
+  General: [
+    "$invite",
+    "$support",
+    "$ping",
+    "$stats",
+    "$about",
+  ],
+
+  Admin: [
+    "$setup",
+    "$prefix",
+    "$dj",
+    "$autoplay",
+  ],
+};
         "$volume",
         "$disconnect",
       ],
