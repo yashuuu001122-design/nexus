@@ -69,7 +69,7 @@ export default function NexusWebsite() {
   const activeCommands = commandTabs[activeCommandTab] || [];
 
   const inviteLink =
-    "https://discord.com/oauth2/authorize?client_id=1410402936487411774&permissions=8&scope=bot%20applications.commands";
+    "https://discord.com/oauth2/authorize?client_id=1510882322847764590&permissions=8&integration_type=0&scope=bot";
 
   const openInvite = () => {
     setShowInvitePopup(true);
@@ -432,7 +432,7 @@ export default function NexusWebsite() {
                 Invite Nexus
               </button>
               <a
-                href="https://discord.gg/zErS7FTxhX"
+                href="https://discord.gg/6sdAhAaCPt"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-7 py-3.5 rounded-2xl bg-white/8 border border-white/10 font-bold hover:bg-white/10 transition backdrop-blur-xl"
