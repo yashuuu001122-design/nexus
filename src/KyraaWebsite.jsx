@@ -13,7 +13,7 @@ export default function KyraaWebsite() {
     },
     {
       title: "Invite in One Click",
-      desc: "Users can invite Kyraa.xo straight from the website using the Discord bot invite flow.",
+      desc: "Users can invite Kyraa. straight from the website using the Discord bot invite flow.",
       icon: "🔗",
     },
     {
@@ -38,28 +38,28 @@ export default function KyraaWebsite() {
   const commandTabs = useMemo(
     () => ({
       Music: [
-        "%play song name",
-        "%skip",
-        "%queue",
-        "%pause",
-        "%resume",
-        "%247",
+        "$play song name",
+        "$skip",
+        "$queue",
+        "$pause",
+        "$resume",
+        "$247",
       ],
       Utility: [
-        "%help",
-        "%invite",
-        "%support",
-        "%ping",
-        "%stats",
-        "%about",
-      ],
+        "$help",
+        "$invite",
+        "$support",
+        "$ping",
+        "$stats",
+        "$about",
+      ]
       Admin: [
-        "%setup",
-        "%prefix",
-        "%dj",
-        "%autoplay",
-        "%volume",
-        "%disconnect",
+        "$setup",
+        "$prefix",
+        "$dj",
+        "$autoplay",
+        "$volume",
+        "$disconnect",
       ],
     }),
     []
@@ -150,7 +150,7 @@ export default function KyraaWebsite() {
               K
             </div>
             <div>
-              <div className="text-lg font-bold tracking-wide">Kyraa.xo</div>
+              <div className="text-lg font-bold tracking-wide">Kyraa.</div>
               <div className="text-xs text-white/60">Premium Discord Bot Website</div>
             </div>
           </div>
@@ -185,12 +185,12 @@ export default function KyraaWebsite() {
                   animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
                   transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
                 >
-                  Kyraa.xo
+                  Kyraa.
                 </motion.span>
               </h1>
 
               <p className="mt-6 text-white/70 text-lg leading-8 max-w-2xl">
-                Welcome to Kyraa.xo — your ultimate Discord music bot. Enjoy smooth playback, powerful controls, and a premium experience designed to elevate your server's vibe.
+                Welcome to Kyraa. — your ultimate Discord music bot. Enjoy smooth playback, powerful controls, and a premium experience designed to elevate your server's vibe.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
@@ -198,7 +198,7 @@ export default function KyraaWebsite() {
                   onClick={openInvite}
                   className="px-6 py-3 rounded-2xl bg-gradient-to-r from-fuchsia-500 via-purple-500 to-violet-600 font-semibold hover:scale-[1.05] hover:shadow-2xl hover:shadow-purple-600/40 transition duration-300 inline-block"
                 >
-                  Invite Kyraa.xo
+                  Invite Kyraa.
                 </button>
                 <a
                   href="#features"
@@ -236,7 +236,7 @@ export default function KyraaWebsite() {
                     <span className="h-3 w-3 rounded-full bg-yellow-400" />
                     <span className="h-3 w-3 rounded-full bg-green-400" />
                   </div>
-                  <div className="text-sm text-white/60">kyraa-xo.vercel.app</div>
+                  <div className="text-sm text-white/60">kyraa-.vercel.app</div>
                 </div>
 
                 <div className="p-6 md:p-8 space-y-5">
@@ -245,7 +245,7 @@ export default function KyraaWebsite() {
                     className="rounded-3xl bg-gradient-to-br from-fuchsia-500/20 to-violet-700/20 border border-white/10 p-6 backdrop-blur-2xl shadow-lg shadow-purple-900/20"
                   >
                     <div className="text-sm text-purple-200 mb-2">Featured Bot Panel</div>
-                    <div className="text-3xl font-black">Kyraa.xo</div>
+                    <div className="text-3xl font-black">Kyraa.</div>
                     <div className="mt-5 flex gap-3 flex-wrap">
                       {["Music", "24/7", "Invite"].map((tag) => (
                         <div key={tag} className="px-3 py-2 rounded-xl bg-white/10 text-sm border border-white/10">
@@ -312,7 +312,7 @@ export default function KyraaWebsite() {
               <div className="text-purple-300 font-semibold tracking-[0.25em] uppercase text-xs mb-3">Commands</div>
               <h2 className="text-3xl md:text-4xl font-black">Command categories</h2>
               <p className="mt-4 text-white/65 leading-8 text-lg">
-                Switch between categories to preview what Kyraa.xo can do.
+                Switch between categories to preview what Kyraa. can do.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
@@ -379,7 +379,7 @@ export default function KyraaWebsite() {
             <div className="text-purple-300 font-semibold tracking-[0.25em] uppercase text-xs mb-3">FAQ</div>
             <h2 className="text-3xl md:text-5xl font-black">Frequently asked questions</h2>
             <p className="mt-4 text-white/65 text-lg">
-              Common questions for users who visit the Kyraa.xo website.
+              Common questions for users who visit the Kyraa. website.
             </p>
           </div>
 
@@ -387,7 +387,7 @@ export default function KyraaWebsite() {
             {[
               {
                 q: "How does the invite button work?",
-                a: "Users can invite Kyraa.xo directly from this website using the Discord invite flow.",
+                a: "Users can invite Kyraa. directly from this website using the Discord invite flow.",
               },
               {
                 q: "Can I add more sections later?",
@@ -416,7 +416,7 @@ export default function KyraaWebsite() {
 
         <motion.section id="support" className="max-w-7xl mx-auto px-6 py-20" {...sectionAnimation}>
           <div className="rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-fuchsia-500/20 via-violet-700/15 to-black/40 p-8 md:p-12 text-center backdrop-blur-3xl shadow-2xl shadow-purple-900/40 ring-1 ring-white/10 hover:shadow-purple-600/40 transition duration-300">
-            <div className="text-purple-300 font-semibold tracking-[0.3em] uppercase text-xs mb-3">Kyraa.xo</div>
+            <div className="text-purple-300 font-semibold tracking-[0.3em] uppercase text-xs mb-3">Kyraa.</div>
             <h2 className="text-3xl md:text-5xl font-black leading-tight">Invite your bot in one click</h2>
             <p className="mt-5 text-white/70 text-lg max-w-2xl mx-auto leading-8">
               Smooth gradients, stronger glass cards, animated transitions, category tabs, and invite popup are now all part of the experience.
@@ -426,7 +426,7 @@ export default function KyraaWebsite() {
                 onClick={openInvite}
                 className="px-6 py-3 rounded-2xl bg-gradient-to-r from-fuchsia-500 via-purple-500 to-violet-600 font-semibold hover:scale-[1.05] hover:shadow-2xl hover:shadow-purple-600/40 transition duration-300 inline-block"
               >
-                Invite Kyraa.xo
+                Invite Kyraa.
               </button>
               <a
                 href="https://discord.gg/zErS7FTxhX"
@@ -443,7 +443,7 @@ export default function KyraaWebsite() {
 
       <footer className="relative z-10 border-t border-white/10 bg-black/20 backdrop-blur-2xl">
         <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/55">
-          <div>© 2026 Kyraa.xo — Designed for a premium Discord bot feel.</div>
+          <div>© 2026 Kyraa. — Designed for a premium Discord bot feel.</div>
           <div className="flex items-center gap-5">
             <a href="#features" className="hover:text-white transition">Features</a>
             <a href="#commands" className="hover:text-white transition">Commands</a>
