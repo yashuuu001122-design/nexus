@@ -35,6 +35,7 @@ export default function KyraaWebsite() {
     { label: "Theme", value: "Purple Premium" },
   ];
 
+  // FIXED: Removed the malformed object declaration inside the array
   const commandTabs = useMemo(
     () => ({
       Music: [
@@ -47,30 +48,25 @@ export default function KyraaWebsite() {
       ],
       Utility: [
         "$help",
-        const commands = {
-  General: [
-    "$invite",
-    "$support",
-    "$ping",
-    "$stats",
-    "$about",
-  ],
-
-  Admin: [
-    "$setup",
-    "$prefix",
-    "$dj",
-    "$autoplay",
-  ],
-};
+        "$invite",
+        "$support",
+        "$ping",
+        "$stats",
+        "$about",
         "$volume",
         "$disconnect",
       ],
+      Admin: [
+        "$setup",
+        "$prefix",
+        "$dj",
+        "$autoplay",
+      ]
     }),
     []
   );
 
-  const activeCommands = commandTabs[activeCommandTab];
+  const activeCommands = commandTabs[activeCommandTab as keyof typeof commandTabs] || [];
 
   const inviteLink =
     "https://discord.com/oauth2/authorize?client_id=1410402936487411774&permissions=8&scope=bot%20applications.commands";
@@ -104,6 +100,7 @@ export default function KyraaWebsite() {
         )}
       </AnimatePresence>
 
+      {/* Decorative Background Elements */}
       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top,rgba(139,92,246,0.25),transparent_35%),radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.18),transparent_25%),radial-gradient(circle_at_20%_80%,rgba(76,29,149,0.22),transparent_30%)]" />
 
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -148,6 +145,7 @@ export default function KyraaWebsite() {
         className="absolute bottom-20 left-1/3 h-56 w-56 rounded-full bg-purple-800/20 blur-3xl pointer-events-none"
       />
 
+      {/* Header */}
       <header className="sticky top-0 z-30 backdrop-blur-2xl bg-black/20 border-b border-white/10 shadow-lg shadow-black/10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -175,7 +173,9 @@ export default function KyraaWebsite() {
         </div>
       </header>
 
+      {/* Main Content */}
       <main className="relative z-10">
+        {/* Hero Section */}
         <motion.section className="max-w-7xl mx-auto px-6 pt-16 md:pt-24 pb-20" {...sectionAnimation}>
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
@@ -227,6 +227,7 @@ export default function KyraaWebsite() {
               </div>
             </motion.div>
 
+            {/* Panel Graphic */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -276,6 +277,7 @@ export default function KyraaWebsite() {
           </div>
         </motion.section>
 
+        {/* Features Section */}
         <motion.section id="features" className="max-w-7xl mx-auto px-6 py-16" {...sectionAnimation}>
           <div className="text-center max-w-3xl mx-auto mb-12">
             <div className="text-purple-300 font-semibold tracking-[0.25em] uppercase text-xs mb-3">Features</div>
@@ -311,6 +313,7 @@ export default function KyraaWebsite() {
           </div>
         </motion.section>
 
+        {/* Commands Section */}
         <motion.section id="commands" className="max-w-7xl mx-auto px-6 py-16" {...sectionAnimation}>
           <div className="grid lg:grid-cols-2 gap-8 items-start">
             <div className="rounded-[2rem] border border-white/10 bg-white/10 p-8 backdrop-blur-3xl shadow-xl shadow-purple-900/20 hover:shadow-purple-700/30 transition duration-300">
@@ -357,7 +360,7 @@ export default function KyraaWebsite() {
               </motion.div>
             </div>
 
-            <div id="stats" className="space-y-6">
+            <div id="stats-highlights" className="space-y-6">
               <motion.div whileHover={{ y: -4 }} className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-fuchsia-600/15 to-violet-800/15 p-8 backdrop-blur-3xl shadow-xl shadow-purple-900/20">
                 <div className="text-purple-300 font-semibold tracking-[0.25em] uppercase text-xs mb-3">Highlights</div>
                 <h3 className="text-2xl md:text-3xl font-black">Why people will like this site</h3>
@@ -379,6 +382,7 @@ export default function KyraaWebsite() {
           </div>
         </motion.section>
 
+        {/* FAQ Section */}
         <motion.section id="faq" className="max-w-7xl mx-auto px-6 py-16" {...sectionAnimation}>
           <div className="text-center max-w-3xl mx-auto mb-12">
             <div className="text-purple-300 font-semibold tracking-[0.25em] uppercase text-xs mb-3">FAQ</div>
@@ -419,6 +423,7 @@ export default function KyraaWebsite() {
           </div>
         </motion.section>
 
+        {/* Footer Support Invite Banner Section */}
         <motion.section id="support" className="max-w-7xl mx-auto px-6 py-20" {...sectionAnimation}>
           <div className="rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-fuchsia-500/20 via-violet-700/15 to-black/40 p-8 md:p-12 text-center backdrop-blur-3xl shadow-2xl shadow-purple-900/40 ring-1 ring-white/10 hover:shadow-purple-600/40 transition duration-300">
             <div className="text-purple-300 font-semibold tracking-[0.3em] uppercase text-xs mb-3">Kyraa.</div>
