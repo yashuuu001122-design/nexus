@@ -1,5 +1,5 @@
-import KyraaWebsite from "./KyraaWebsite.jsx";
+import NexusWebsite from "./NexusWebsite.jsx";
 
 export default function App() {
-  return <KyraaWebsite />;
+  return <NexusWebsite />;
 }
